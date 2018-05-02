@@ -18,50 +18,51 @@ print(df.head(10))
 vocab = {}
 par = {}
 text = df.values
-
-# for line in text:
-#     #print(line[1])
-#     for word in line[1].split():
-#         wd = word.lower()
-
-#         #print(wd)
-#         if wd in vocab:
-#             vocab[wd] += 1
-#         else:
-#             vocab[wd] = 1
-#     n += 1
-#     #if n==10:break
-
-# vocab['word'] = [Id,[doc1,doc2,...],[1,23,...]]
 n = 0
-wdId = 0
 for line in text:
+    #print(line[1])
     for word in line[1].split():
         wd = word.lower()
-        wordindoc = 1
+
         #print(wd)
         if wd in vocab:
-            try:
-                idxdoc = vocab[wd][1].index(n)
-                vocab[wd][2][idxdoc] += 1
-            except:
-                vocab[wd][1].append(n)
-                vocab[wd][2].append(1)
-
+            vocab[wd] += 1
         else:
-            
-            vocab[wd] = [wdId,[n],[1]]
-            wdId += 1
-
-#        vocab[wd][1].append(n)
- #       vocab[wd][2].append(wordindoc)
+            vocab[wd] = 1
     n += 1
     #if n==10:break
 
-#print(vocab)
+# vocab['word'] = [Id,[doc1,doc2,...],[1,23,...]]
 
-#sys.exit()
+# wdId = 0
+# for line in text:
+#     for word in line[1].split():
+#         wd = word.lower()
+#         wordindoc = 1
+#         #print(wd)
+#         if wd in vocab:
+#             try:
+#                 idxdoc = vocab[wd][1].index(n)
+#                 vocab[wd][2][idxdoc] += 1
+#             except:
+#                 vocab[wd][1].append(n)
+#                 vocab[wd][2].append(1)
 
+#         else:
+            
+#             vocab[wd] = [wdId,[n],[1]]
+#             wdId += 1
+
+#     n += 1
+#     if n==10000:break
+
+# print(vocab[1][100])
+
+# sys.exit()
+
+#voc ={}
+#for n in vocab:
+#    voc[vocab[1][0]] = sum(vocab[1][2])
 vocab_sort = sorted(vocab.items(), key=lambda x: x[1])
 for i in range(120000,120010):
         print(vocab_sort[i])
@@ -74,8 +75,8 @@ for idx in vocab_sort:
     vocab_idx[n] = idx[1]
     n += 1
 
-vocab.clear()        
-vocab_sort.clear()
+#vocab.clear()        
+#vocab_sort.clear()
 
 
 
@@ -86,7 +87,12 @@ x = range(a,b)
 y = np.array([vocab_idx[i] for i in range(a,b)])
 
 plt.plot(x,y)
+
 plt.show()
+
+
+# Analyse each doc using the vocabulary
+
 
 
 #df.boxplot(column='ApplicantIncome')

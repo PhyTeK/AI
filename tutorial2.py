@@ -10,10 +10,10 @@ from sklearn.naive_bayes import GaussianNB
 
 # initialize binary relevance multi-label classifier
 # with a gaussian naive bayes base classifier
-classifier = BinaryRelevance(GaussianNB())
+#classifier = BinaryRelevance(GaussianNB())
 
 # train
-classifier.fit(X_train, y_train)
+#classifier.fit(x_train, y_train)
 
 # predict
-predictions = classifier.predict(X_test)
+#predictions = classifier.predict(x_test)

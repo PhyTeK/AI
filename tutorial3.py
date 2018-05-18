@@ -39,6 +39,7 @@ clf = MultinomialNB().fit(X_train_tfidf, twenty_train.target)
 # Prediction
 docs_new = ['God is love', 'OpenGL on the GPU is fast']
 X_new_counts = count_vect.transform(docs_new)
+
 X_new_tfidf = tfidf_transformer.transform(X_new_counts)
 predicted = clf.predict(X_new_tfidf)
 for doc, category in zip(docs_new, predicted):

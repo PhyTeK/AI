@@ -5,6 +5,7 @@ import numpy as np
 x = [4,8,12,16,1,4,9,16]
 y = [1,4,9,16,4,8,12,3]
 label = [0,1,2,3,0,1,2,3]
+
 colors = ['red','green','blue','purple']
 
 fig = plt.figure(figsize=(8,8))
@@ -16,3 +17,4 @@ cb.set_ticks(loc)
 cb.set_ticklabels(colors)
 
 plt.show()
+

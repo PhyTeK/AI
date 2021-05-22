@@ -1,2 +1,2 @@
-# Somes Kaggle competitions on Learning Machine and Artificial Inteligence
+# Somes codes on Learning Machine and Artificial Inteligence
 

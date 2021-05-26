@@ -1,2 +1,2 @@
-# Somes codes on Learning Machine and Artificial Inteligence
+# Learning Machine and Artificial Inteligence Experiments
 
